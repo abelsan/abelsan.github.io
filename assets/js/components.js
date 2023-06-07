@@ -10,7 +10,7 @@ class NavBar extends HTMLElement {
           <a class="navbar-brand" href="#/home">
             <img src="assets/images/logo.svg" height="30" class="d-inline-block align-top" alt="" loading="lazy">
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
       
