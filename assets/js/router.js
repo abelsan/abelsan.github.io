@@ -11,7 +11,8 @@ window.onload = function(){
         '#/teaching': 'assets/docs/teaching.html',
         '#/speaking': 'assets/docs/speaking.html',
         '#/podcast':  'assets/docs/podcast.html',
-        '#/blog':     'assets/docs/blog.html'
+        '#/blog':     'assets/docs/blog.html',
+        '#/books':    'assets/docs/books.html'
     };
 
     function router(){
