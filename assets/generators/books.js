@@ -13,7 +13,9 @@
 
 const books = require('./books.json');
 const fs = require('fs');
+var jsonfile = "assets/generators/books.json";
 console.log('Start books generation ...')
+
 
 var html = `
 <style>
@@ -26,7 +28,7 @@ var html = `
 </style>
 
 <div class="container px-4 py-5" id="featured-3">
-  <h2 class="pb-2 border-bottom">Books List</h2>
+  <h2 class="pb-2 border-bottom">Books List (<a href="${jsonfile}">Json File</a>)</h2>
   <div class="row g-4 py-5">
 `
 
