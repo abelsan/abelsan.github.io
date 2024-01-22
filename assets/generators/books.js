@@ -1,8 +1,16 @@
-// -----------------------------
+// ------------------------------------
 //  Code generates books.html
-//  Looks for books.json
-//  Run: node books.js
-// -----------------------------
+// 
+//  steps to add a new book:
+//    - find book on amazon
+//    - get title, author, isbn, url
+//    - add book to books.json
+//        books.json needs to be 
+//        in same directory
+//    - run: node books.js
+// ------------------------------------
+
+
 const books = require('./books.json');
 const fs = require('fs');
 console.log('Start books generation ...')
