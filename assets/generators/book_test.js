@@ -1,6 +1,6 @@
 // ----------------------------------------
-// code will break all the time because 
-// amazon does not like scraping
+// Test if image retrieval is working. 
+// Amazon does not like scraping
 // e.g. the selectors change all the time
 // ----------------------------------------
 
@@ -9,20 +9,12 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 
 // brief list for debugging - see books.json for full list
-var books = [
-    {
+var book = {
         title : 'The Coming Wave',
         author : 'Mustafa Suleyman',
         isbn : '',
         url : 'https://www.amazon.com/dp/0593728173'
-    },
-    {
-        title : 'Competing in the Age of AI',
-        author : 'Marco Iansiti ',
-        isbn : '',
-        url : 'https://www.amazon.com/dp/1633697622'
-    }
-]    
+};
 
 async function scrapeBook(url) {
     try {
@@ -60,7 +52,7 @@ async function downloadImage(book) {
             responseType: 'stream'
         });
 
-        const writer = fs.createWriteStream('covers/' + book.isbn + '.jpg');
+        const writer = fs.createWriteStream(book.isbn + '.jpg');
 
         response.data.pipe(writer);
 
@@ -73,28 +65,19 @@ async function downloadImage(book) {
     }
 }
 
-// Function to create a delay with a random amount of time
-function delay() {
-    const time = Math.floor(Math.random() * 10000); // Random delay between 0 and 3 secs
-    return new Promise(resolve => setTimeout(resolve, time));
-}
-
-async function process(books) {
-    for (const book of books) {
-        console.log('Scrape Book:', book.title);
-        var data = await scrapeBook(book.url);        
-        if (data.cover) {
-            downloadImage(data);
-            book.isbn = data.isbn;
-        } else {
-            console.log('Book cover not found.');
-        }
-        await delay(); // Wait for the random delay
+async function test(book) {
+    console.log('Scrape Book:', book.title);
+    var data = await scrapeBook(book.url);        
+    if (data.cover) {
+        downloadImage(data);
+        book.isbn = data.isbn;
+    } else {
+        console.log('Book cover not found.');
     }
 
-    // write the books array to a file
-    console.log('Writing books to file...'); 
-    fs.writeFileSync('working_list.json', JSON.stringify(books));    
+    // print book data 
+    console.log('Book to data ...'); 
+    console.log(JSON.stringify(book));
 }
 
-process(books);
+test(book);
