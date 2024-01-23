@@ -1,0 +1,49 @@
+-----------
+LECTURES
+-----------
+
+ - Intro - Why do we care?
+        link: https://bit.ly/3U7Arjn
+        Start with 5 min demo, consider:
+         ~ data analysis
+         ~ document search
+         ~ assistant, interactive UI
+
+ - Intro - Augmented LLMs 
+        Link: https://bit.ly/47KfmPa
+
+ - Democratization of data
+        Link: https://bit.ly/3Ob9WFO
+ 
+ - Democratization of AI
+        Link: https://bit.ly/3tTjoqE
+
+ - LLMOps & Stack
+        Link: https://bit.ly/3SsTIdD
+
+ - Prompt Engineering
+        Link: https://bit.ly/3Sd60pm
+
+ - Ethics 
+        Link: https://bit.ly/48ES8uW
+        Think of examples, consider:
+         ~ Smart wanna cry
+         ~ Global regulation for the largest
+         ~ Everything changes if cheap compute
+
+ - LLM Agents 
+        Link: https://bit.ly/3vMOFfi
+
+ - Closing comments 
+        Link: https://bit.ly/3SuPl0L
+
+ - Cybersecurity 
+        Link: https://bit.ly/3HtN14L
+
+ - AI Enabled Economy 
+        Link: https://bit.ly/3HtN14L
+
+--------------------------- 
+Presentation Collection
+---------------------------
+Link: https://bit.ly/3OgOLlL
