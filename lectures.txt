@@ -31,6 +31,10 @@ LECTURES
          ~ Global regulation for the largest
          ~ Everything changes if cheap compute
 
+ - AI Governance
+ 
+ - AI Leadership
+
  - LLM Agents 
         Link: https://bit.ly/3vMOFfi
 
