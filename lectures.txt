@@ -11,6 +11,8 @@ VISION
  - The future, agents
  - The AI enabled economy
 
+* consider the emerging topic of AI-augmented vs fully AI-native - e.g. workflows. 
+
 -----------
 LECTURES
 -----------
