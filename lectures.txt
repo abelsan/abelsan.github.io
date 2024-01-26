@@ -1,4 +1,17 @@
 -----------
+VISION
+-----------
+
+ - What is it?
+ - Why is it different?
+ - How do you build? The software story
+ - Ethics? Risks? Opportunities?
+ - How do you lead Gen-AI?
+ - Re-envisioning your business/organization
+ - The future, agents
+ - The AI enabled economy
+
+-----------
 LECTURES
 -----------
 
