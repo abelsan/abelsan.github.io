@@ -12,7 +12,7 @@ VISION
  - The AI enabled economy
 
 * consider the emerging topic of AI-augmented vs fully AI-native - e.g. workflows. 
-
+e.g. https://a16z.com/the-future-of-prosumer-the-rise-of-ai-native-workflows/
 -----------
 LECTURES
 -----------
