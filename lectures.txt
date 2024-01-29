@@ -13,6 +13,31 @@ VISION
 
 * consider the emerging topic of AI-augmented vs fully AI-native - e.g. workflows. 
 e.g. https://a16z.com/the-future-of-prosumer-the-rise-of-ai-native-workflows/
+
+--------
+DEMOS
+--------
+
+ - AI native workflows
+   vizcom.ai
+ - Food related words
+   colab notebook
+ - Toaster complaint
+   Codespaces
+ - Influencer - content moderation
+   Codespaces
+ - Street photography assistant
+   my gpts
+ - Democratizing data
+   colab notebook
+ - Democratizing AI
+   colab notebook
+ - An LLM for everyone
+   100+ LLMs
+   Azure LLM instance
+ - Fine tuning example
+   AWS or GCP
+
 -----------
 LECTURES
 -----------
