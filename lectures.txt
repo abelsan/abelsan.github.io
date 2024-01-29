@@ -37,6 +37,8 @@ DEMOS
    Azure LLM instance
  - Fine tuning example
    AWS or GCP
+ - podcast pipeline
+   multiple LLMs
 
 -----------
 LECTURES
