@@ -19,7 +19,16 @@ DEMOS
 --------
 
  - AI native workflows
-   vizcom.ai
+   Creating a camera image vizcom.ai
+ - Summarizing a slide deck
+   creating a title
+ - Course tranformation
+    ~ text transcription 
+    ~ knowledge base creation
+    ~ interactive assistant
+    ~ assesment of writing participation
+    ~ auto quiz generation
+    ~ auto similation generation 
  - Food related words
    colab notebook
  - Toaster complaint
@@ -37,8 +46,10 @@ DEMOS
    Azure LLM instance
  - Fine tuning example
    AWS or GCP
- - podcast pipeline
+ - Podcast pipeline
    multiple LLMs
+ - What is a chain?
+   Creating a simple chain
 
 -----------
 LECTURES
