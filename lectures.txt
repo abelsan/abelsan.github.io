@@ -18,6 +18,10 @@ e.g. https://a16z.com/the-future-of-prosumer-the-rise-of-ai-native-workflows/
 DEMOS
 --------
 
+ - Powerful but fragile
+    ~ my example using AutoGPT
+      request a summary of three newspapers
+      the VM is on digital ocean
  - Awesome prompts 
     ~ https://github.com/f/awesome-chatgpt-prompts
     ~ https://huggingface.co/datasets/fka/awesome-chatgpt-prompts/viewer/default/train?p=1
