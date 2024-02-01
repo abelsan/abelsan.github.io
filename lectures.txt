@@ -18,6 +18,9 @@ e.g. https://a16z.com/the-future-of-prosumer-the-rise-of-ai-native-workflows/
 DEMOS
 --------
 
+ - Awesome prompts 
+    ~ https://github.com/f/awesome-chatgpt-prompts
+    ~ https://huggingface.co/datasets/fka/awesome-chatgpt-prompts/viewer/default/train?p=1
  - AI native workflows
    Creating a camera image vizcom.ai
  - Summarizing a slide deck
