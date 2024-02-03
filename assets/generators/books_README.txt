@@ -19,3 +19,32 @@ https://abel.mit.edu/assets/generators/books.js
 
 Step 04: Sample output
 view-source:https://abel.mit.edu/assets/docs/books.html
+
+------------------------------------------------------------------------
+
+Alternatives to Amazon.
+
+-----------
+WORLDCAT
+-----------
+First search by ISBN
+https://search.worldcat.org/search?q=bn:078794324X
+
+Then follow first link
+https://search.worldcat.org/title/44960660
+
+Then read subjects
+
+---------------
+LibraryThing
+---------------
+Link structure
+http://www.librarything.com/isbn/1633697622
+
+peterparker
+park1980
+peter.parker.data@gmail.com
+
+Token - not needed, use direct link
+64232a16460ae09def15bcc18611b4f8
+&apikey=64232a16460ae09def15bcc18611b4f8
