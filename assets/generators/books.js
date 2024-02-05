@@ -16,6 +16,11 @@ const fs = require('fs');
 var jsonfile = "assets/generators/books.json";
 console.log('Start books generation ...')
 
+// get number of books
+var numBooks = books.length;
+
+// If I decide to use amazon affiliate link, I need to add the following to the page
+var amazonAffiliate = "?tag=abelsan-20";
 
 var html = `
 <style>
@@ -28,7 +33,7 @@ var html = `
 </style>
 
 <div class="container px-4 py-5" id="featured-3">
-  <h2 class="pb-2 border-bottom">Books List (<a href="${jsonfile}">Json File</a>)</h2>
+  <h2 class="pb-2 border-bottom">Book List (<a href="${jsonfile}">Json File</a>) - Count: ${numBooks}</h2>
   <div class="row g-4 py-5">
 `
 
@@ -43,12 +48,15 @@ books.forEach(book => {
                 <img src="assets/img/books/${book.isbn}.jpg" class="img-thumbnail" alt="book cover">
                 <p>
                     ${book.title} by ${book.author}
-                    <a href="${book.url}" class="link-primary">More ...</a>
+                    <a href="${book.url}" class="link-primary">Paid Link ...</a>
                 </p>        
             </div>
         </div>        
     `        
 });
+
+// If I decide to use amazon affiliate links, I need to add the following to the page
+var disclosure = 'As an Amazon Associate I earn from qualifying purchases.';
 
 html += `
     <!-- Repeat for other features -->
