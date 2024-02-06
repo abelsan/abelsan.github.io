@@ -47,8 +47,8 @@ books.forEach(book => {
             <div class="feature">
                 <img src="assets/img/books/${book.isbn}.jpg" class="img-thumbnail" alt="book cover">
                 <p>
-                    ${book.title} by ${book.author}
-                    <a href="${book.url}" class="link-primary">Paid Link ...</a>
+                    ${book.title} by ${book.author} 
+                    (<a href="${book.url}" class="link-primary">Link</a>)
                 </p>        
             </div>
         </div>        
