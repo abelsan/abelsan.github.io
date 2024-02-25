@@ -1,21 +1,3 @@
-The Woman Who Smashed Codes
-by Jason Fagone
-0062430513
-https://www.amazon.com/dp/0062430513
-https://m.media-amazon.com/images/I/51nMuXOF9PL._SY445_SX342_.jpg
-
-The Meaning of It All
-by Richard P. Feynman
-0465023940
-https://www.amazon.com/dp/0465023940
-https://m.media-amazon.com/images/I/71vNmNuc5IL._SY342_.jpg
-
-How to Think
-by Alan Jacobs
-0451499603
-https://www.amazon.com/dp/0451499603
-https://m.media-amazon.com/images/I/71vBr557G-L._SY342_.jpg
-
 The Design Of Everyday Things
 by Don Norman
 9780465050659
@@ -74,3 +56,16 @@ by Lawrence Anthony
 125000781X
 https://www.amazon.com/dp/125000781X
 https://m.media-amazon.com/images/I/71VWWZtM6PL._SY522_.jpg
+
+The Meaning of It All
+by Richard P. Feynman
+0465023940
+https://www.amazon.com/dp/0465023940
+https://m.media-amazon.com/images/I/71vNmNuc5IL._SY342_.jpg
+
+How to Think
+by Alan Jacobs
+0451499603
+https://www.amazon.com/dp/0451499603
+https://m.media-amazon.com/images/I/71vBr557G-L._SY342_.jpg
+
