@@ -1,5 +1,5 @@
 // ----------------------------------------
-// code will break all the time because 
+// code breaks all the time because 
 // amazon does not like scraping
 // e.g. the selectors change all the time
 // ----------------------------------------
