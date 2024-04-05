@@ -60,7 +60,7 @@ var disclosure = 'As an Amazon Associate I earn from qualifying purchases.';
 
 html += `
     <br><br>
-    <img src="assets/img/books/qr.png" width="100">
+    <img src="assets/img/books/qr.png" style="width: 100px;" alt="QR code for books">
     <!-- Repeat for other features -->
     <!-- Dynamically generated features end -->
   </div>
