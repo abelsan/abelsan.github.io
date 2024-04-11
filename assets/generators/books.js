@@ -59,11 +59,14 @@ books.forEach(book => {
 var disclosure = 'As an Amazon Associate I earn from qualifying purchases.';
 
 html += `
-    <br><br>
-    <img src="assets/img/books/qr.png" style="width: 100px;" alt="QR code for books">
-    <!-- Repeat for other features -->
-    <!-- Dynamically generated features end -->
   </div>
+  <!-- Repeat for other features -->
+  <!-- Dynamically generated features end -->
+  <!-- ---------------------------------- -->
+  <br><br>
+  <!-- link to book recommendations, qr code -->    
+  <img src="assets/img/books/qr.png" style="width: 100px;" alt="QR code for books">
+
 </div>
 `
 
