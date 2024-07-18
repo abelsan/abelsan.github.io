@@ -65,7 +65,8 @@ html += `
   <!-- ---------------------------------- -->
   <br><br>
   <!-- link to book recommendations, qr code -->    
-  <img src="assets/img/books/qr.png" style="width: 100px;" alt="QR code for books">
+  <img src="assets/img/books/qr_abel.png" style="width: 100px;" alt="QR code for abel's website">
+  <img src="assets/img/books/qr_courses.png" style="width: 100px;" alt="QR code for books">
 
 </div>
 `
