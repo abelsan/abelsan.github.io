@@ -35,7 +35,7 @@ class NavBar extends HTMLElement {
                 <a class="nav-link" href="#/books">Books</a>
               </li>                             
               <li class="nav-item">
-                <a class="nav-link" href="#/podcast">Podcast</a>
+                <a class="nav-link" href="#/podcast">Daily</a>
               </li>               
             </ul>
           </div>
