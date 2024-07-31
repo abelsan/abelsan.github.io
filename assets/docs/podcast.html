@@ -1,4 +1,8 @@
 
+    <!-- ------------------ -->
+    <!--       Styles       -->
+    <!-- ------------------ -->
+
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -78,62 +82,10 @@
       }
     </style>
 
-    <!-- ------------------------------------------------- -->      
-    <!--           START COLOR SWITCHING + ICONS           -->
-    <!-- ------------------------------------------------- -->      
+    <!-- --------------------- -->
+    <!--       SVG icons       -->
+    <!-- --------------------- -->
 
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-      <symbol id="check2" viewBox="0 0 16 16">
-        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-      </symbol>
-      <symbol id="circle-half" viewBox="0 0 16 16">
-        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-      </symbol>
-      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
-      </symbol>
-      <symbol id="sun-fill" viewBox="0 0 16 16">
-        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-      </symbol>
-    </svg>
-
-    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-              id="bd-theme"
-              type="button"
-              aria-expanded="false"
-              data-bs-toggle="dropdown"
-              aria-label="Toggle theme (auto)">
-        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-            Light
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-            Dark
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
-            Auto
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
-        </li>
-      </ul>
-    </div>
-
-    
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="arrow-right-circle" viewBox="0 0 16 16">
         <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
@@ -144,21 +96,12 @@
       </symbol>
     </svg>
 
-    <!-- ------------------------------------------------- -->      
-    <!--            END COLOR SWITCHING + ICONS            -->
-    <!-- ------------------------------------------------- -->      
+    <!-- --------------------------------------------- -->      
+    <!--            Content and page layout            -->
+    <!-- --------------------------------------------- -->      
 
 <div class="col-lg-8 mx-auto p-4 py-md-5">
 
-   <!-- ---------- -->      
-   <!--   header   -->
-   <!-- ---------- -->      
-  <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
-    <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
-      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-      <span class="fs-4">Abelsan - Daily Intelligence</span>
-    </a>
-  </header>
 
   <main>
 
@@ -169,10 +112,12 @@
     <p class="fs-5 col-md-12">Welcome to Daily Intelligence. We explore AI strategy and data insights, focusing on how AI and generative AI are transforming modern organizations. Each post highlights how these technologies drive innovation, boost efficiency, and create competitive advantages. Whether you’re a business leader, tech enthusiast, or curious about AI's future, you'll find valuable insights to navigate the evolving tech landscape.</p>
     <hr class="col-3 col-md-2 mb-5">
 
-    <!-- ----------------- -->      
-    <!--   START CONTENT   -->
-    <!-- ----------------- -->      
-    <div class="row g-5">
+
+        <!-- ----------------- -->      
+        <!--   Start content   -->
+        <!-- ----------------- -->      
+        <div class="row g-5">
+
 
         <div class="col-md-6">
             <h2 class="text-body-emphasis">Substack</h2>
@@ -180,37 +125,37 @@
             <ul class="list-unstyled ps-0">
         
                 <li>
-                    <a class="icon-link mb-1" href="https://abelsan.substack.com/p/the-gaming-revolution" rel="noopener" target="_blank">
+                    <a class="icon-link mb-1" href="https://abelsan.substack.com/p/unlocking-ais-potential-its-all-about" rel="noopener" data-bs-toggle="tooltip" data-bs-title="Unlocking AI's Potential: It's All About the Data" target="_blank">
+                    <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                    Unlocking AI's Potential: It's
+                    </a>
+                </li>
+            
+                <li>
+                    <a class="icon-link mb-1" href="https://abelsan.substack.com/p/the-gaming-revolution" rel="noopener" data-bs-toggle="tooltip" data-bs-title="The gaming revolution" target="_blank">
                     <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
                     The gaming revolution
                     </a>
                 </li>
             
                 <li>
-                    <a class="icon-link mb-1" href="https://abelsan.substack.com/p/cyber-insurance-and-olympics-surveillance" rel="noopener" target="_blank">
+                    <a class="icon-link mb-1" href="https://abelsan.substack.com/p/cyber-insurance-and-olympics-surveillance" rel="noopener" data-bs-toggle="tooltip" data-bs-title="Cyber Insurance & Olympics Surveillance" target="_blank">
                     <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-                    Cyber Insurance & Olympics Surveillance
+                    Cyber Insurance & Olympics Sur
                     </a>
                 </li>
             
                 <li>
-                    <a class="icon-link mb-1" href="https://abelsan.substack.com/p/content-creation-data-extraction" rel="noopener" target="_blank">
+                    <a class="icon-link mb-1" href="https://abelsan.substack.com/p/content-creation-data-extraction" rel="noopener" data-bs-toggle="tooltip" data-bs-title="Content Creation, Data Extraction, and Transformation" target="_blank">
                     <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-                    Content Creation, Data Extraction, and Transformation
+                    Content Creation, Data Extract
                     </a>
                 </li>
             
                 <li>
-                    <a class="icon-link mb-1" href="https://abelsan.substack.com/p/apple-ai-may-be-boring-but-its-a" rel="noopener" target="_blank">
+                    <a class="icon-link mb-1" href="https://abelsan.substack.com/p/apple-ai-may-be-boring-but-its-a" rel="noopener" data-bs-toggle="tooltip" data-bs-title="Apple AI may be boring, but it's a winning strategy" target="_blank">
                     <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-                    Apple AI may be boring, but it's a winning strategy
-                    </a>
-                </li>
-            
-                <li>
-                    <a class="icon-link mb-1" href="https://abelsan.substack.com/p/generative-ai-developments-intelligence" rel="noopener" target="_blank">
-                    <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-                    Generative AI Developments, Intelligence Gathering, and Software Updates
+                    Apple AI may be boring, but it
                     </a>
                 </li>
             </ul></div>
@@ -220,37 +165,37 @@
             <ul class="list-unstyled ps-0">
         
                 <li>
-                    <a class="icon-link mb-1" href="https://www.youtube.com/watch?v=4tonVZi7cMw" rel="noopener" target="_blank">
+                    <a class="icon-link mb-1" href="https://www.youtube.com/watch?v=rzDgk9qZ-xQ" rel="noopener" data-bs-toggle="tooltip" data-bs-title="Unlocking AI's Potential: How Scale AI and JP Morgan could Use Proprietary Data for LLMs" target="_blank">
                     <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-                    How AI and Art Are Revolutionizing Gaming 🕹️ #ai #aigaming #gaming #art  #technology
+                    Unlocking AI's Potential: How 
                     </a>
                 </li>
             
                 <li>
-                    <a class="icon-link mb-1" href="https://www.youtube.com/watch?v=5l4A2JEeKe0" rel="noopener" target="_blank">
+                    <a class="icon-link mb-1" href="https://www.youtube.com/watch?v=4tonVZi7cMw" rel="noopener" data-bs-toggle="tooltip" data-bs-title="How AI and Art Are Revolutionizing Gaming 🕹️ #ai #aigaming #gaming #art  #technology" target="_blank">
                     <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-                    AI Breakthroughs & Olympic Surveillance Shocker! 🚨#technews #olympics2024 #olympics #ai #boston
+                    How AI and Art Are Revolutioni
                     </a>
                 </li>
             
                 <li>
-                    <a class="icon-link mb-1" href="https://www.youtube.com/watch?v=yEuQ6Nhz6ug" rel="noopener" target="_blank">
+                    <a class="icon-link mb-1" href="https://www.youtube.com/watch?v=5l4A2JEeKe0" rel="noopener" data-bs-toggle="tooltip" data-bs-title="AI Breakthroughs & Olympic Surveillance Shocker! 🚨#technews #olympics2024 #olympics #ai #boston" target="_blank">
+                    <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                    AI Breakthroughs & Olympic Sur
+                    </a>
+                </li>
+            
+                <li>
+                    <a class="icon-link mb-1" href="https://www.youtube.com/watch?v=yEuQ6Nhz6ug" rel="noopener" data-bs-toggle="tooltip" data-bs-title="The gaming revolution" target="_blank">
                     <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
                     The gaming revolution
                     </a>
                 </li>
             
                 <li>
-                    <a class="icon-link mb-1" href="https://www.youtube.com/watch?v=vqmadlGWEwA" rel="noopener" target="_blank">
+                    <a class="icon-link mb-1" href="https://www.youtube.com/watch?v=vqmadlGWEwA" rel="noopener" data-bs-toggle="tooltip" data-bs-title="AI Startups Boom, Zuckerberg's AI Vision, and Web-Scraping Breakthrough! 🚀 #ai #meta #matrix" target="_blank">
                     <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-                    AI Startups Boom, Zuckerberg's AI Vision, and Web-Scraping Breakthrough! 🚀 #ai #meta #matrix
-                    </a>
-                </li>
-            
-                <li>
-                    <a class="icon-link mb-1" href="https://www.youtube.com/watch?v=-h4m2fBoEeM" rel="noopener" target="_blank">
-                    <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-                    Cyber Insurance & Olympics Surveillance
+                    AI Startups Boom, Zuckerberg's
                     </a>
                 </li>
             </ul></div>
@@ -260,42 +205,49 @@
             <ul class="list-unstyled ps-0">
         
                 <li>
-                    <a class="icon-link mb-1" href="https://podcasters.spotify.com/pod/show/abelsan/episodes/The-gaming-revolution-e2mf0fc" rel="noopener" target="_blank">
+                    <a class="icon-link mb-1" href="https://podcasters.spotify.com/pod/show/abelsan/episodes/Unlocking-AIs-Potential-Its-All-About-the-Data-e2mkke9" rel="noopener" data-bs-toggle="tooltip" data-bs-title="Unlocking AI's Potential: It's All About the Data" target="_blank">
+                    <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+                    Unlocking AI's Potential: It's
+                    </a>
+                </li>
+            
+                <li>
+                    <a class="icon-link mb-1" href="https://podcasters.spotify.com/pod/show/abelsan/episodes/The-gaming-revolution-e2mf0fc" rel="noopener" data-bs-toggle="tooltip" data-bs-title="The gaming revolution" target="_blank">
                     <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
                     The gaming revolution
                     </a>
                 </li>
             
                 <li>
-                    <a class="icon-link mb-1" href="https://podcasters.spotify.com/pod/show/abelsan/episodes/Cyber-Insurance--Olympics-Surveillance-e2meu9c" rel="noopener" target="_blank">
+                    <a class="icon-link mb-1" href="https://podcasters.spotify.com/pod/show/abelsan/episodes/Cyber-Insurance--Olympics-Surveillance-e2meu9c" rel="noopener" data-bs-toggle="tooltip" data-bs-title="Cyber Insurance & Olympics Surveillance" target="_blank">
                     <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-                    Cyber Insurance & Olympics Surveillance
+                    Cyber Insurance & Olympics Sur
                     </a>
                 </li>
             
                 <li>
-                    <a class="icon-link mb-1" href="https://podcasters.spotify.com/pod/show/abelsan/episodes/Content-Creation--Data-Extraction--and-Transformation-e2me17t" rel="noopener" target="_blank">
+                    <a class="icon-link mb-1" href="https://podcasters.spotify.com/pod/show/abelsan/episodes/Content-Creation--Data-Extraction--and-Transformation-e2me17t" rel="noopener" data-bs-toggle="tooltip" data-bs-title="Content Creation, Data Extraction, and Transformation" target="_blank">
                     <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-                    Content Creation, Data Extraction, and Transformation
+                    Content Creation, Data Extract
                     </a>
                 </li>
             
                 <li>
-                    <a class="icon-link mb-1" href="https://podcasters.spotify.com/pod/show/abelsan/episodes/Generative-AI-Developments--Intelligence-Gathering--and-Software-Updates-e2mb06t" rel="noopener" target="_blank">
+                    <a class="icon-link mb-1" href="https://podcasters.spotify.com/pod/show/abelsan/episodes/Generative-AI-Developments--Intelligence-Gathering--and-Software-Updates-e2mb06t" rel="noopener" data-bs-toggle="tooltip" data-bs-title="Generative AI Developments, Intelligence Gathering, and Software Updates" target="_blank">
                     <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-                    Generative AI Developments, Intelligence Gathering, and Software Updates
-                    </a>
-                </li>
-            
-                <li>
-                    <a class="icon-link mb-1" href="https://podcasters.spotify.com/pod/show/abelsan/episodes/Apples-AI-e2m43j8" rel="noopener" target="_blank">
-                    <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-                    Apple's AI
+                    Generative AI Developments, In
                     </a>
                 </li>
             </ul></div>
     </div>
     <!-- --------------- -->      
     <!--   END CONTENT   -->
-    <!-- --------------- -->          
- 
+    <!-- --------------- -->
+
+  </main>
+</div>    
+<!-- ------------------------------- -->      
+<!--   ONLINE DAILY AI CONTENT END   -->
+<!-- ------------------------------- -->      
+
+<hr class="w-100 mb-4">    

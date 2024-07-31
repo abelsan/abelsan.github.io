@@ -80,48 +80,14 @@ window.onload = function(){
         if (innerElement) {            
             scrollIntoView(innerElement);
         }
+
+        // setup tooltips
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))        
     };            
 
     function scrollIntoView(id){
         document.getElementById(id).scrollIntoView();
-    }    
+    } 
+
 };
-
-        
-
-
-/*
-
-    function router(){
-        var path = window.location.hash;
-        console.log('path:' + path);
-        var route = routes[path];
-        console.log('route:' + route);
-        if (route) load(route);        
-    }
-    router();
-
-    // listen hash path changes
-    window.addEventListener('hashchange', router);
-
-    // load page from file system
-    async function load(url){
-        const res = await fetch(url);
-        const content = await res.text();
-        const element = document.getElementById('content');
-        element.innerHTML = content;
-        element.addEventListener('DOMSubtreeModified', contentChange);        
-    };            
-    function contentChange(e) {
-        console.log('Content changed!!');
-    }
-
-
-    // async function internalLink(innerElement,file){
-    //     var url = `assets/docs/${file}.html`;
-    //     const res = await fetch(url);
-    //     const content = await res.text();
-    //     const element = document.getElementById(innerElement);
-    //     element.innerHTML = content;        
-    // }
-*/
