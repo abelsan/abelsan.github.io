@@ -22,6 +22,21 @@ var numBooks = books.length;
 // If I decide to use amazon affiliate link, I need to add the following to the page
 var amazonAffiliate = "?tag=abelsan-20";
 
+// Define categories in desired order
+const categories = [
+  'AI',
+  'Digital Transformation',
+  'Strategic Decision Making',
+  'Cybersecurity',  
+  'The Way We Think',
+  'Leadership',
+  'Biology',
+  'Government and Society',
+  'Fintech',
+  'Mathematics',
+  'Wide-Angle Perspectives'
+];
+
 var html = `
 <style>
 .my-col {
@@ -37,23 +52,29 @@ var html = `
   <div class="row g-4 py-5">
 `
 
-// create a feature for each book
-books.forEach(book => {
-    html += `
-        <!-- Dynamically generated features start -->
+// Generate a section per category
+categories.forEach(category => {
+  // Filter books in this category
+  const booksInCat = books.filter(book => book.category === category);
+  if (booksInCat.length > 0) {
+    html += `  <h3 class="mt-4">${category}</h3>`;
+    html += `  <div class="row g-4 py-3">`;
+    booksInCat.forEach(book => {
+      html += `
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 my-col">
-
-            <!-- Feature 1 -->
-            <div class="feature">
-                <img src="assets/img/books/${book.isbn}.jpg" class="img-thumbnail" alt="book cover">
-                <p>
-                    ${book.title} by ${book.author} 
-                    (<a href="${book.url}" class="link-primary">Link</a>)
-                </p>        
-            </div>
-        </div>        
-    `        
+          <div class="feature">
+            <img src="assets/img/books/${book.isbn}.jpg" class="img-thumbnail" alt="book cover">
+            <p>
+              ${book.title} by ${book.author} 
+              (<a href="${book.url}" class="link-primary">Link</a>)
+            </p>        
+          </div>
+        </div>`;
+    });
+    html += `  </div>`;
+  }
 });
+
 
 // If I decide to use amazon affiliate links, I need to add the following to the page
 var disclosure = 'As an Amazon Associate I earn from qualifying purchases.';
