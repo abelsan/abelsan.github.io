@@ -628,5 +628,12 @@
         "isbn": "9780465050659",
         "url": "https://www.amazon.com/dp/0465050654",
         "category": "Wide-Angle Perspectives"
+    },
+    {
+        "title": "Working in Public: The Making and Maintenance of Open Source Software",
+        "author": "Nadia Eghbal",
+        "isbn": "0578675862",
+        "url": "https://www.amazon.com/dp/0578675862",
+        "category": "Digital Transformation"
     }
 ]
