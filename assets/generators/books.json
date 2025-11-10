@@ -677,5 +677,12 @@
         "isbn": "0063312697",
         "url": "https://www.amazon.com/dp/0063312697",
         "category": "AI Novels"
-    }
+    },
+    {
+        "title": "Klara and the Sun",
+        "author": "Kazuo Ishiguro",
+        "isbn": "059331817X",
+        "url": "https://www.amazon.com/dp/059331817X",
+        "category": "AI Novels"
+    }    
 ]
