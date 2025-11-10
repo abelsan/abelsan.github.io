@@ -1,4 +1,4 @@
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM loaded");
 
   // ----------------------------------------
@@ -19,34 +19,28 @@ window.onload = function () {
   let lastPage = "";
 
   // ----------------------------------------
-  // Router core
+  // Core Router
   // ----------------------------------------
   async function router() {
     let path = getPath();
     console.log("Path:", path);
 
-    // Find route
     const route = routes[path] || routes["/"];
     console.log("Route:", route);
 
     await loadPage(route);
 
-    // Handle deep links like /bio#photos
     const hash = window.location.hash;
     if (hash) {
-      const id = hash.slice(1);
-      const el = document.getElementById(id);
+      const el = document.getElementById(hash.slice(1));
       if (el) el.scrollIntoView({ behavior: "smooth" });
     } else {
-      // Only scroll to top if there is no hash
       window.scrollTo(0, 0);
-    }    
+    }
   }
-  
 
   // ----------------------------------------
   // Normalize URL path
-  // Supports both hash (/#/bio) and clean (/bio)
   // ----------------------------------------
   function getPath() {
     if (window.location.hash.startsWith("#/")) {
@@ -57,7 +51,7 @@ window.onload = function () {
   }
 
   // ----------------------------------------
-  // Load external HTML file into #content
+  // Load route content
   // ----------------------------------------
   async function loadPage(url) {
     try {
@@ -69,12 +63,6 @@ window.onload = function () {
 
       const container = document.getElementById("content");
       container.innerHTML = html;
-
-      // Activate Bootstrap tooltips if needed
-      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-      [...tooltipTriggerList].forEach(
-        (el) => new bootstrap.Tooltip(el)
-      );
     } catch (err) {
       console.error("Error loading route:", err);
     }
@@ -84,41 +72,34 @@ window.onload = function () {
   // Navigation helpers
   // ----------------------------------------
   function navigate(path) {
-    if (window.location.origin.includes("github.io")) {
-      // GitHub Pages prefers hash routing for safety
-      window.location.hash = `#${path}`;
-    } else {
-      window.history.pushState({}, "", path);
-      router();
-    }
+    window.history.pushState({}, "", path);
+    router();
   }
 
   // ----------------------------------------
-  // Listen for route changes
+  // Event listeners
   // ----------------------------------------
   window.addEventListener("popstate", router);
   window.addEventListener("hashchange", router);
 
-  // ----------------------------------------
-  // Initialize
-  // ----------------------------------------
-  router();
-
-  // ----------------------------------------
-  // Global navigation click handler (optional)
-  // ----------------------------------------
   document.body.addEventListener("click", (e) => {
-    // if (e.target.matches("a[data-route]")) {
-    //   e.preventDefault();
-    //   navigate(e.target.getAttribute("href"));
-    // }
-
     const a = e.target.closest("a[href^='/']");
     if (a && !a.hasAttribute("data-external")) {
       e.preventDefault();
       navigate(a.getAttribute("href"));
     }
-
-
   });
-};
+
+  // ----------------------------------------
+  // Initialization (handles redirect from 404)
+  // ----------------------------------------
+  const redirect = sessionStorage.redirect;
+  if (redirect) {
+    sessionStorage.removeItem("redirect");
+    console.log("Redirecting to:", redirect);
+    navigate(redirect);
+  } else {
+    router();
+  }
+});
+// End of router.js

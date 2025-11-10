@@ -4,10 +4,13 @@
     <meta http-equiv="refresh" content="0; url=/index.html">
 
     <script>
+      // Capture the path + query + hash
       const redirect = location.pathname + location.search + location.hash;
       if (redirect) sessionStorage.redirect = redirect;
+
+      // Redirect to the SPA entry
       location.replace("/");
-    </script>
+    </script>    
 
   </head>
 </html>
