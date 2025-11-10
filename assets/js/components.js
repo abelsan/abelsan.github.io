@@ -7,7 +7,7 @@ class NavBar extends HTMLElement {
     this.innerHTML = `
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#/home">
+          <a class="navbar-brand" href="/home">
             <img src="assets/img/logo.svg" height="30" class="d-inline-block align-top" alt="" loading="lazy">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,26 +17,23 @@ class NavBar extends HTMLElement {
           <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto mb-2 mb-md-0">
               <li class="nav-item active">
-                <a class="nav-link" aria-current="page" href="#/home">Home</a>
+                <a class="nav-link" data-route aria-current="page" href="/home">Home</a>
               </li>
               <li class="nav-item">                  
-                <a class="nav-link" href="#/bio">Bio</a>
+                <a class="nav-link" data-route href="/bio">Bio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#/research">Research</a>
+                <a class="nav-link" data-route href="/research">Research</a>
               </li>              
               <li class="nav-item">
-                <a class="nav-link" href="#/teaching">Teaching</a>
+                <a class="nav-link" data-route href="/teaching">Teaching</a>
               </li>              
               <li class="nav-item">
-                <a class="nav-link" href="#/speaking">Speaking</a>
+                <a class="nav-link" data-route href="/speaking">Speaking</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#/books">Books</a>
+                <a class="nav-link" data-route href="/books">Books</a>
               </li>                             
-              <li class="nav-item">
-                <a class="nav-link" href="#/podcast">Daily</a>
-              </li>               
             </ul>
           </div>
         </div>

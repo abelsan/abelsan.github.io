@@ -34,7 +34,8 @@ const categories = [
   'Government and Society',
   'Fintech',
   'Mathematics',
-  'Wide-Angle Perspectives'
+  'Wide-Angle Perspectives',
+  'AI Novels'
 ];
 
 var html = `

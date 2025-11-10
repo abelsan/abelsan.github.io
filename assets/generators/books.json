@@ -19,7 +19,14 @@
         "isbn": "067423782X",
         "url": "https://www.amazon.com/dp/067423782X",
         "category": "The Way We Think"
-    },        
+    },
+    {
+        "title": "Inheritance: The Evolutionary Origins of the Modern World",
+        "author": "Harvey Whitehouse",
+        "isbn": "067429162X",
+        "url": "https://www.amazon.com/dp/067429162X",
+        "category": "The Way We Think"
+    },
     {
         "title": "The Coming Wave",
         "author": "Mustafa Suleyman",
@@ -189,6 +196,13 @@
         "category": "The Way We Think"
     },
     {
+        "title": "The Anxious Generation",
+        "author": "Jonathan Haidt",
+        "isbn": "0593655036",
+        "url": "https://www.amazon.com/dp/0593655036",
+        "category": "The Way We Think"
+    },    
+    {
         "title": "The Price of Tomorrow: Why Deflation is the Key to an Abundant Future",
         "author": "Jeff Booth",
         "isbn": "1999257405",
@@ -321,6 +335,13 @@
         "url": "https://www.amazon.com/dp/1098134184",
         "category": "AI"
     },
+    {
+        "title": "Why Machines Learn",
+        "author": " Anil Ananthaswamy",
+        "isbn": "0593185749",
+        "url": "https://www.amazon.com/dp/0593185749",
+        "category": "AI"
+    },    
     {
         "title": "Influence: The Psychology of Persuasion",
         "author": "Robert B. Cialdini",
@@ -609,6 +630,13 @@
         "category": "Government and Society"
     },
     {
+        "title": "Abundance",
+        "author": "Ezra Klein",
+        "isbn": "1668023482",
+        "url": "https://www.amazon.com/dp/1668023482",
+        "category": "Government and Society"
+    },    
+    {
         "title": "How Not to Be Wrong",
         "author": "Jordan Ellenberg",
         "isbn": "0143127535",
@@ -635,5 +663,19 @@
         "isbn": "0578675862",
         "url": "https://www.amazon.com/dp/0578675862",
         "category": "Digital Transformation"
+    },
+    {
+        "title": "Title",
+        "author": "Author",
+        "isbn": "0578675862",
+        "url": "https://www.amazon.com/dp/0578675862",
+        "category": "AI Novels"
+    },
+    {
+        "title": "Title",
+        "author": "Author",
+        "isbn": "0578675862",
+        "url": "https://www.amazon.com/dp/0578675862",
+        "category": "AI Novels"
     }
 ]

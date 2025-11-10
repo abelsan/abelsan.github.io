@@ -1,93 +1,116 @@
-window.onload = function(){
-    console.log('DOM loaded');
-    var history = '';
+window.onload = function () {
+  console.log("DOM loaded");
 
-    var routes = {
-        '':           'assets/docs/home.html',     
-        '/':          'assets/docs/home.html',
-        '#/home':     'assets/docs/home.html',        
-        '#/bio':      'assets/docs/bio.html',
-        '#/research': 'assets/docs/research.html',
-        '#/teaching': 'assets/docs/teaching.html',
-        '#/speaking': 'assets/docs/speaking.html',
-        '#/podcast':  'assets/docs/podcast.html',
-        '#/blog':     'assets/docs/blog.html',
-        '#/books':    'assets/docs/books.html'
-    };
+  // ----------------------------------------
+  // Route configuration
+  // ----------------------------------------
+  const routes = {
+    "/": "assets/docs/home.html",
+    "/home": "assets/docs/home.html",
+    "/bio": "assets/docs/bio.html",
+    "/research": "assets/docs/research.html",
+    "/teaching": "assets/docs/teaching.html",
+    "/speaking": "assets/docs/speaking.html",
+    "/podcast": "assets/docs/podcast.html",
+    "/blog": "assets/docs/blog.html",
+    "/books": "assets/docs/books.html",
+  };
 
-    function router(){
-        console.log('document.referrer: ' + document.referrer);
-        var link         = window.location.hash;
-        var innerElement = '';
+  let lastPage = "";
 
-        // ----------------------------------------
-        // If more than one parameter in the link, 
-        // I am targeting an element in the page, 
-        // an anchor. First load page, the scroll
-        // the element into view.
-        // ----------------------------------------
+  // ----------------------------------------
+  // Router core
+  // ----------------------------------------
+  async function router() {
+    let path = getPath();
+    console.log("Path:", path);
 
-        var count = (link.split("/").length - 1);        
-        if (count > 1) {
-            // anchor element 
-            innerElement = link.split("/")[2];            
+    // Find route
+    const route = routes[path] || routes["/"];
+    console.log("Route:", route);
 
-            // page to load
-            link = '#/' + link.split("/")[1];
-        }
+    await loadPage(route);
 
-        // ----------------------------------------
-        // Remember loaded page - used to avoid
-        // page reload on internal linking
-        // ----------------------------------------        
-        if (history === link && innerElement){
-            scrollIntoView(innerElement);
-            history = link;
-            return;            
-        }
-        history = link;  
+    // Handle deep links like /bio#photos
+    const hash = window.location.hash;
+    if (hash) {
+      const id = hash.slice(1);
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Only scroll to top if there is no hash
+      window.scrollTo(0, 0);
+    }    
+  }
+  
 
-
-        // get path (route) for page
-        console.log('link: ' + link);
-        var route = routes[link];
-
-        // if route exists, load page
-        console.log('route:' + route);
-        if (route) loadPage(route, innerElement);
+  // ----------------------------------------
+  // Normalize URL path
+  // Supports both hash (/#/bio) and clean (/bio)
+  // ----------------------------------------
+  function getPath() {
+    if (window.location.hash.startsWith("#/")) {
+      return window.location.hash.replace("#", "");
+    } else {
+      return window.location.pathname === "/" ? "/" : window.location.pathname;
     }
-    router();
+  }
 
-    // listen hash path changes
-    window.addEventListener('hashchange', router);
+  // ----------------------------------------
+  // Load external HTML file into #content
+  // ----------------------------------------
+  async function loadPage(url) {
+    try {
+      if (lastPage === url) return;
+      lastPage = url;
 
+      const res = await fetch(url);
+      const html = await res.text();
 
-    async function loadPage(url, innerElement){
-        // load page
-        const res     = await fetch(url);
-        const content = await res.text();
-        const element = document.getElementById('content');
-        element.innerHTML = content;
+      const container = document.getElementById("content");
+      container.innerHTML = html;
 
-        // ------------------------------------------
-        // Scroll to top -- need to avoid navigation 
-        // drift on page. Else the scroll state 
-        // carries over on to next page
-        // ------------------------------------------
-        window.scrollTo(0, 0);
+      // Activate Bootstrap tooltips if needed
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+      [...tooltipTriggerList].forEach(
+        (el) => new bootstrap.Tooltip(el)
+      );
+    } catch (err) {
+      console.error("Error loading route:", err);
+    }
+  }
 
-        // element scroll into view
-        if (innerElement) {            
-            scrollIntoView(innerElement);
-        }
+  // ----------------------------------------
+  // Navigation helpers
+  // ----------------------------------------
+  function navigate(path) {
+    if (window.location.origin.includes("github.io")) {
+      // GitHub Pages prefers hash routing for safety
+      window.location.hash = `#${path}`;
+    } else {
+      window.history.pushState({}, "", path);
+      router();
+    }
+  }
 
-        // setup tooltips
-        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))        
-    };            
+  // ----------------------------------------
+  // Listen for route changes
+  // ----------------------------------------
+  window.addEventListener("popstate", router);
+  window.addEventListener("hashchange", router);
 
-    function scrollIntoView(id){
-        document.getElementById(id).scrollIntoView();
-    } 
+  // ----------------------------------------
+  // Initialize
+  // ----------------------------------------
+  router();
 
+  // ----------------------------------------
+  // Global navigation click handler (optional)
+  // ----------------------------------------
+  document.body.addEventListener("click", (e) => {
+    if (e.target.matches("a[data-route]")) {
+      e.preventDefault();
+      navigate(e.target.getAttribute("href"));
+    }
+  });
 };
