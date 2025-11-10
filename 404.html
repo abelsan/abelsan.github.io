@@ -3,7 +3,8 @@
   <head>
     <meta http-equiv="refresh" content="0; url=/index.html">
     <script>
-      const redirect = location.pathname.slice(1);
+      const redirect = location.pathname;
+      // const redirect = location.pathname + location.search + location.hash;
       if (redirect) {
         sessionStorage.redirect = redirect;
       }
