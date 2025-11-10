@@ -108,9 +108,17 @@ window.onload = function () {
   // Global navigation click handler (optional)
   // ----------------------------------------
   document.body.addEventListener("click", (e) => {
-    if (e.target.matches("a[data-route]")) {
+    // if (e.target.matches("a[data-route]")) {
+    //   e.preventDefault();
+    //   navigate(e.target.getAttribute("href"));
+    // }
+
+    const a = e.target.closest("a[href^='/']");
+    if (a && !a.hasAttribute("data-external")) {
       e.preventDefault();
-      navigate(e.target.getAttribute("href"));
+      navigate(a.getAttribute("href"));
     }
+
+
   });
 };

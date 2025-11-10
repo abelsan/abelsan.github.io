@@ -61,6 +61,14 @@
     <script src="assets/js/router.js"></script>
     <script type="module" src="assets/docs/bio.js"></script>    
 
+    <script>
+    const redirect = sessionStorage.redirect;
+    if (redirect) {
+      sessionStorage.removeItem('redirect');
+      router.navigate(redirect);
+    }
+    </script>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
