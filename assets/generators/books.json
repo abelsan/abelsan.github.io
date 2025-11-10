@@ -677,5 +677,19 @@
         "isbn": "0578675862",
         "url": "https://www.amazon.com/dp/0578675862",
         "category": "AI Novels"
+    },
+    {
+        "title": "Machines Like Me",
+        "author": "Ian McEwan",
+        "isbn": "0385545118",
+        "url": "https://www.amazon.com/dp/0385545118",
+        "category": "AI Novels"
+    },
+    {
+        "title": "Annie Bot",
+        "author": "Sierra Greer",
+        "isbn": "0063312697",
+        "url": "https://www.amazon.com/dp/0063312697",
+        "category": "AI Novels"
     }
 ]
