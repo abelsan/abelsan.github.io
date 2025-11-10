@@ -61,24 +61,27 @@
     <script src="assets/js/router.js"></script>
     <script type="module" src="assets/docs/bio.js"></script>    
 
-    <!-- 
-    <script>
-    const redirect = sessionStorage.redirect;
-    if (redirect) {
-      sessionStorage.removeItem('redirect');
-      router.navigate(redirect);
-    }
-    </script> 
-    -->
-
     <script>
     window.addEventListener("DOMContentLoaded", () => {
-      const redirect = sessionStorage.redirect;
-      if (redirect) {
-        sessionStorage.removeItem("redirect");
-        // Delay navigation slightly to ensure router is initialized
-        setTimeout(() => router.navigate(redirect), 50);
-      }
+      // Wait for router initialization
+      const tryRedirect = () => {
+        const redirect = sessionStorage.redirect;
+        if (redirect) {
+          console.log("Redirecting to stored path:", redirect);
+          sessionStorage.removeItem("redirect");
+
+          // Important: delay slightly so router is fully ready
+          setTimeout(() => {
+            router.navigate(redirect);
+          }, 100);
+        } else {
+          // No redirect → load normal route
+          router();
+        }
+      };
+
+      // Give your router.js time to attach window.router
+      setTimeout(tryRedirect, 100);
     });
     </script>
 
